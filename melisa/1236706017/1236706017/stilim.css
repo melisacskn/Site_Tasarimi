@@ -1,0 +1,173 @@
+﻿/* Genel Sayfa Arka Planı */
+body {
+    background-color: #212121; /* Kömür grisi */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sayfa İçeriği */
+#sayfa {
+    width: 980px;
+    background: #212121; /* Kömür grisi */
+    border-radius: 8px;
+    padding-top: 8px;
+    margin: 20px auto; /* Sayfayı ortalar ve üstten 20px boşluk bırakır */
+    color: #FFFFFF; /* Beyaz metin */
+}
+
+/* Header - Üst Kısım */
+#header {
+    background-image: linear-gradient(#C2185B, #212121); /* Koyu pembe - Kömür grisi gradyanı */
+    padding: 5px;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo - Sol Tarafta */
+#logo img {
+    max-height: 50px;
+}
+
+/* Kullanıcı Bilgisi - Sağ Tarafta */
+#usag {
+    color: #C2185B; /* Koyu pembe */
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+/* Menü - Sol Menü Alanı */
+#menu {
+    background-image: linear-gradient(#C2185B, #212121); /* Koyu pembe - Kömür grisi gradyanı */
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 50px;
+    color: #FFFFFF; /* Beyaz metin */
+    border-radius: 5px;
+}
+
+    /* Menü Listesi */
+    #menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        /* Menü Öğeleri */
+        #menu ul li {
+            padding: 10px 20px;
+            border-bottom: 1px solid #C2185B; /* Koyu pembe kenarlık */
+        }
+
+            /* Menü Linkleri */
+            #menu ul li a {
+                color: #FFFFFF; /* Beyaz metin */
+                font-family: 'Trebuchet MS', Arial, sans-serif;
+                font-size: 18px;
+                text-decoration: none;
+                letter-spacing: 1px;
+                display: block;
+                text-align: left;
+            }
+
+                /* Menü Link Hover Efekti */
+                #menu ul li a:hover {
+                    background-color: #C2185B; /* Koyu pembe hover efekti */
+                }
+
+/* İçerik Alanı */
+#icerik {
+    margin-left: 240px; /* Menüden sonra içerik alanı sağa kayar */
+    padding: 20px;
+    background-color: #212121; /* Kömür grisi */
+    color: #FFFFFF; /* Beyaz metin */
+    flex-grow: 1;
+}
+
+/* Footer - Alt Kısım */
+#footer {
+    background-image: linear-gradient(#C2185B, #212121); /* Koyu pembe - Kömür grisi gradyanı */
+    overflow: auto;
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Footer Sol Alan - Ödeme İkonları */
+#asol img {
+    width: 70px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Footer Sağ Alan */
+#asag {
+    margin-top: 10px;
+}
+
+    /* Footer Linkleri */
+    #asag a {
+        color: #C2185B; /* Koyu pembe */
+        text-decoration: none;
+    }
+
+        #asag a:hover {
+            text-decoration: underline;
+        }
+
+/* Çıkış Yap Butonu */
+.btn {
+    background-color: #C2185B; /* Koyu pembe */
+    color: #FFFFFF; /* Beyaz metin */
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+    /* Buton Hover Efekti */
+    .btn:hover {
+        background-color: #FFFFFF; /* Beyaz hover efekti */
+        color: #C2185B; /* Koyu pembe metin */
+    }
+
+/* Tablo Stili */
+.tablo {
+    color: #FFFFFF; /* Beyaz metin */
+    font-size: 24px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+    .tablo tr {
+        height: 45px;
+    }
+
+    .tablo input[type="text"],
+    .tablo textarea {
+        color: #FFFFFF; /* Beyaz metin */
+        background-color: #212121; /* Kömür grisi arka plan */
+        border: 1px solid #C2185B; /* Koyu pembe kenarlık */
+        padding: 3px;
+        resize: none;
+    }
+
+/* Grid Stili */
+.grid {
+    margin-top: 40px;
+    color: #FFFFFF; /* Beyaz metin */
+    margin-bottom: 40px;
+}

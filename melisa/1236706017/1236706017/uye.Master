@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="uye.master.cs" Inherits="_1236706017.uye" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MEPHORE</title>
+    <link rel="stylesheet" href="stil1.css">
+    <style>
+        /* Fotoğrafı ortalamak için stil */
+        #header-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px; 
+            margin-bottom: 20px; 
+        }
+        #header-image img {
+            max-width: 80%; 
+            height: auto; 
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Üst Fotoğraf -->
+        <div id="header-image">
+            <img src="images/ANASAYFA.png" alt="Anasayfa Görseli">
+        </div>
+
+        <!-- Üst Menü -->
+        <div id="header">
+            <div id="logo">MEPHORA</div>
+            <div id="search-bar">
+                <input type="text" placeholder="Ürün, marka, kategori ara..." />
+                <button type="submit">Ara</button>
+            </div>
+            <div id="user-actions">
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                <a href="Parola_Degis.aspx" class="cart-link"><i class="fas fa-shopping-cart"></i> Şifre Değiştirme </a>
+                <a href="Sepet.aspx">🛒 Sepetim</a>
+            </div>
+        </div>
+
+        <!-- Menü -->
+        <nav id="menu">
+            <ul>
+                <li><a href="Default.aspx">Anasayfa</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Makyaj</a>
+                    <ul>
+                        <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
+                            <ItemTemplate>
+                                <li><a href="kategori1.aspx?kategoriId=<%# Eval("kat_id") %>&kategoriAd=<%# Eval("kat_ad") %>"><%# Eval("kat_ad") %></a></li>
+                            </ItemTemplate>
+                        </asp:ListView>
+                    </ul>
+                </li>
+                <li><a href="#">Parfümler</a></li>
+                <li><a href="#">Cilt Bakımı</a></li>
+                <li><a href="yeniyil.aspx">Yeni Yıl Ürünleri</a></li>
+                <li><a href="admindefault.aspx">Admin Sayfası</a></li>
+            </ul>
+        </nav>
+
+        <!-- İçerik -->
+        <div id="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Alt Menü -->
+        <div id="footer">
+            <p>&copy; 2024 MEPHORA Tasarım. Tüm Hakları Saklıdır.</p>
+        </div>
+
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:baglanti_tanimi %>"
+            SelectCommand="SELECT kat_id, kat_ad FROM kategori">
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>

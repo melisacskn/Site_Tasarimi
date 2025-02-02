@@ -1,0 +1,161 @@
+﻿/* Genel Sayfa Ayarları */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #212121; /* Kömür grisi arka plan */
+    color: #FFFFFF; /* Beyaz metin */
+}
+/* Eski fiyatı çizecek stil */
+
+
+
+
+
+/* Üst Menü */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C2185B; /* Koyu pembe */
+    color: #FFFFFF; /* Beyaz metin */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Gölgede belirgin bir efekt */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+}
+
+#search-bar button {
+    padding: 5px 10px;
+    background-color: #FFFFFF;
+    color: #C2185B;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    #search-bar button:hover {
+        background-color: #E91E63;
+        color: #FFFFFF;
+    }
+
+#user-actions a {
+    margin-left: 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Menü */
+#menu {
+    background-color: #C2185B; /* Koyu pembe arka plan */
+    padding: 10px 0;
+    position: relative;
+    margin-top: 60px;
+}
+
+    #menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+        #menu ul li {
+            position: relative;
+        }
+
+            #menu ul li a {
+                color: #FFFFFF;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 5px 10px;
+            }
+
+                #menu ul li a:hover {
+                    background-color: #FFFFFF;
+                    color: #C2185B;
+                    border-radius: 4px;
+                }
+
+            #menu ul li.dropdown ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #212121;
+                padding: 10px 0;
+                list-style: none;
+                border-radius: 4px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                z-index: 10;
+            }
+
+            #menu ul li.dropdown:hover ul {
+                display: block;
+            }
+
+            #menu ul li.dropdown ul li {
+                padding: 5px 20px;
+            }
+
+                #menu ul li.dropdown ul li a {
+                    color: #FFFFFF;
+                }
+
+                    #menu ul li.dropdown ul li a:hover {
+                        color: #C2185B;
+                    }
+
+/* İçerik Alanı */
+#main {
+    padding: 20px;
+    margin: 80px auto;
+    max-width: 1200px;
+    background: #212121;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Alt Menü */
+#footer {
+    background-color: #C2185B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 20px;
+}
+
+    #footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+/* Eski fiyatın üstünü çizecek stil */
+.urun_eksi_fiyat {
+    text-decoration: line-through; /* Üstü çizili */
+    color: #B0B0B0; /* Gri renk */
+    font-size: 14px; /* Fiyatın boyutu */
+    margin-left: 10px; /* Yeni fiyatla arasına boşluk ekleyebiliriz */
+}
+
+/* Yeni fiyat için stil */
+.urun_fiyat {
+    font-weight: bold; /* Yeni fiyatı kalın yapalım */
+    font-size: 18px; /* Yeni fiyat boyutu */
+    color: #C2185B; /* Yeni fiyatı belirgin yapmak için pembe renk */
+}
